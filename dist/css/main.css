@@ -8,7 +8,7 @@ TABLE OF CONTENTS:
 
 0. Reset
 1. Main Layout
-2. Content
+2. Loader
 
 ==============================================
 */
@@ -30,141 +30,68 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* 1. Main Layout ================================= */
 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-body {
-  background: #ccc;
+/* 2. Loader ================================= */
+.loader .loader-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
 }
 
-/* 2. Content ================================= */
-.content {
-  position: relative;
-  font-family: sans-serif;
-  width: 90%;
-  max-width: 500px;
-  margin: 140px auto;
-  padding: 30px 20px 30px 30px;
+.loader .loader-wrapper img {
+	border: 1px solid red;
+	padding: 10px;
 }
 
-.content .foreground {
-  position: relative;
-  z-index: 2;
-  -webkit-transform: translateZ(100px);
-  transform: translateZ(100px);
+.loader .loader-wrapper .speaker-loader {
+	opacity: 1;
 }
 
-.content .background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: white;
-  z-index: 1;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transform: translateX(20px) perspective(600px) rotateY(15deg);
-  transform: translateX(20px) perspective(600px) rotateY(15deg);
-}
-
-.content:hover .background {
-  -webkit-transform: translateX(-30px) perspective(600px) rotateY(-15deg);
-  transform: translateX(-30px) perspective(600px) rotateY(-15deg);
-}
-
-.content .logo {
-  position: absolute;
-  top: -30px;
-  width: 60px;
-  z-index: 2;
-  -webkit-transform: translateZ(100px);
-  transform: translateZ(100px);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.content .logo:hover {
-  -webkit-transform: rotate(-0.4turn);
-  -ms-transform: rotate(-0.4turn);
-  transform: rotate(-0.4turn);
-}
-
-.content h1 {
-  font-weight: 700;
-  font-size: 22pt;
-  margin: 15px 0;
-}
-
-.content p {
-  color: #777;
-  line-height: 140%;
-}
-
-.content p.github {
-  font-size: 0.8em;
-}
-
-.content p.github a {
-  opacity: 0.2;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.content p.github a:hover {
-  opacity: 1;
-  color: red;
-}
-
-.content code {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 0.8em;
-  opacity: 0.2;
+.loader .loader-wrapper .logo-loader {
+	opacity: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
