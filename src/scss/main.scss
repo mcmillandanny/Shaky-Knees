@@ -15,15 +15,10 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
+@import 'font';
 
-@font-face {
-    font-family: 'viimeinen_syksyregular';
-    src: url('viimeinen_syksy-webfont.woff2') format('woff2'),
-    url('viimeinen_syksy-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+$bandfont: 'viimeinen_syksyregular';
 
-}
 
 // /* 1. Main Layout ================================= */
 
@@ -32,21 +27,38 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
-
-h1,p {
-	font-family: 'viimeinen_syksyregular';
-	font-size: 40px;
-}
-
-span {
-	font-size: 100px;
-}
-
-
 /* 2. Loader ================================= */
 
 .loader {
-	
+	position: relative;
+	width: 100%;
+	height: 100vh;
+
+		.top-text-wrapper {
+			position: absolute;
+			height: 10vh;
+			top: 0;
+			font-family: $bandfont;
+			font-size: 10vh;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+
+			.bolt1-loader, .bolt2-loader {
+				display: inline;
+				width: 5%;
+			}
+
+			.bolt1 {
+				transform: rotate(45deg);
+			}
+
+			.bolt2 {
+				transform: rotate(-90deg);
+			}
+		}
+
+
 	.loader-wrapper {
 		display: flex;
 		justify-content: center;
@@ -54,9 +66,30 @@ span {
 		width: 100%;
 		height: 100vh;
 
-			img {
+		.red-checker {
+			position: absolute;
+			width: 35%;
+			left: -19%;
+			top: -34%;
+			transform: rotate(45deg);
+		}
+
+		.smiley {
+			position: absolute;
+			left: 0%;
+			top: 10%;
+			width: 20%;
+		}
+
+		// .ladder {
+		// 	position: absolute;
+		// 	left: 100%;
+		// 	width: 20%;
+		// }
+
+			.speaker-loader, .logo-loader {
 				padding: 10px;
-				width: 20%;
+				width: 33%;
 		}
 		.speaker-loader {
 			opacity: 1;
@@ -66,4 +99,13 @@ span {
 		}
 	}
 
+}
+
+.content {
+	position: relative;
+	.skull {
+		position: absolute;
+		top: 10%;
+		width: 30%;
+	}
 }

@@ -4,15 +4,23 @@ console.log("Shaky Knees");
 //Speaker Loader Animations
 var loaderSpeaker = new TimelineMax({ delay: 1.5 });
 
-loaderSpeaker.from(".speaker-loader", 2, { y: "-1200px", opacity: 1 });
-loaderSpeaker.to(".speaker-loader", 1, { y: "0", ease: CustomEase.create("custom", "M0,0 C0.323,0 0.38,0.023 0.433,0.05 0.554,0.11 0.764,0.23 0.805,0.44 0.849,0.668 0.839,0.734 0.932,0.734 0.999,0.734 0.974,0.656 1,0.632")
+loaderSpeaker.from(".speaker-loader", 2, {
+    y: "-1200px",
+    opacity: 1,
+    ease: CustomEase.create("custom", "M0,0,C0.14,0,0.719,0.981,0.726,0.998,0.788,0.914,0.84,0.936,0.859,0.95,0.878,0.964,0.897,0.985,0.911,0.998,0.922,0.994,0.939,0.984,0.954,0.984,0.969,0.984,1,1,1,1")
 });
 
 //Logo Loader Animations
 var loaderLogo = new TimelineMax({ delay: 0.4 });
 
-loaderLogo.from(".logo-loader", 1, { opacity: 0, ease: Back.easeIn });
-// loaderLogo.to(".logo-loader",1, {opacity: 0.5})
-loaderLogo.to(".logo-loader", 1, { opacity: 1 });
-loaderLogo.to(".loader", 4, { display: "none" });
+loaderLogo.from(".logo-loader", 1, {
+    opacity: 0,
+    ease: Back.easeIn
+});
+loaderLogo.to(".logo-loader", 1, {
+    opacity: 1
+});
+// loaderLogo.to(".loader", 4, {
+//     display: "none"
+// });
 //# sourceMappingURL=main.js.map
