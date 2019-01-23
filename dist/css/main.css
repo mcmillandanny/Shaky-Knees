@@ -82,8 +82,8 @@ table {
 }
 
 .loader .loader-wrapper img {
-	border: 1px solid red;
 	padding: 10px;
+	width: 30%;
 }
 
 .loader .loader-wrapper .speaker-loader {
