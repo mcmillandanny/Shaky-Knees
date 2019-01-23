@@ -16,11 +16,30 @@ TABLE OF CONTENTS:
 /* 0. Reset ================================= */
 @import 'reset';
 
+@font-face {
+    font-family: 'viimeinen_syksyregular';
+    src: url('viimeinen_syksy-webfont.woff2') format('woff2'),
+    url('viimeinen_syksy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-/* 1. Main Layout ================================= */
+}
+
+// /* 1. Main Layout ================================= */
+
 
 * {
 	box-sizing: border-box;
+}
+
+
+h1,p {
+	font-family: 'viimeinen_syksyregular';
+	font-size: 40px;
+}
+
+span {
+	font-size: 100px;
 }
 
 
