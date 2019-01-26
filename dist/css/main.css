@@ -126,13 +126,6 @@ table {
 	transform: rotate(45deg);
 }
 
-.loader .loader-wrapper .smiley {
-	position: absolute;
-	left: 0%;
-	top: 10%;
-	width: 20%;
-}
-
 .loader .loader-wrapper .speaker-loader, .loader .loader-wrapper .logo-loader {
 	padding: 10px;
 	width: 33%;
@@ -153,11 +146,11 @@ table {
 }
 
 .content header .logo-home {
-	width: 10%;
+	width: 20%;
 	float: left;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (min-width: 320px) {
 	.content header .logo-home {
 		display: block;
 		margin-left: auto;
@@ -167,17 +160,41 @@ table {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.content header .logo-home {
+		width: 20%;
+		margin: -20px;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.content header .logo-home {
+		margin: -55px;
+	}
+}
+
 .content header .nav ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	font-family: "viimeinen_syksyregular";
 	color: black;
+	background: #de4344;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (min-width: 320px) {
 	.content header .nav ul {
+		background: #de4344;
+		padding: 10px;
 		justify-content: space-around;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.content header .nav ul {
+		background: #de4344;
+		justify-content: flex-end;
 	}
 }
 
@@ -186,9 +203,15 @@ table {
 	font-size: 3em;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (min-width: 320px) {
 	.content header .nav ul li {
 		margin: 0px 0px 0px 5px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.content header .nav ul li {
+		margin: 40px 40px 20px 10px;
 	}
 }
 

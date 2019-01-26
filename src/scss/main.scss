@@ -22,13 +22,15 @@ TABLE OF CONTENTS:
 
 
 
-$mobile-break: 410px;
+$mobile-break: 320px;
 $tablet-break: 768px;
 $desktop-break: 1200px;
 
 
 $bandfont: 'viimeinen_syksyregular';
 
+$accentRed: #de4344;
+$darkRed: #b13637;
 
 // /* 1. Main Layout ================================= */
 
@@ -84,22 +86,9 @@ $bandfont: 'viimeinen_syksyregular';
 			transform: rotate(45deg);
 		}
 
-		.smiley {
-			position: absolute;
-			left: 0%;
-			top: 10%;
-			width: 20%;
-		}
-
-		// .ladder {
-		// 	position: absolute;
-		// 	left: 100%;
-		// 	width: 20%;
-		// }
-
-			.speaker-loader, .logo-loader {
-				padding: 10px;
-				width: 33%;
+		.speaker-loader, .logo-loader {
+			padding: 10px;
+			width: 33%;
 		}
 		.speaker-loader {
 			opacity: 1;
@@ -117,18 +106,32 @@ $bandfont: 'viimeinen_syksyregular';
 	height: 100vh;
 	
 	header {
+
 		.logo-home {
-			width: 10%;
+			width: 20%;
 			float: left;
-			
-				@media screen and (max-width: $mobile-break) {
+
+
+				@media screen and (min-width: $mobile-break) {
 					display: block;
 					margin-left: auto;
 					margin-right: auto;
 					width: 50%;
 					float: none;
 
-			}
+				}
+			
+				@media screen and (min-width: $tablet-break){
+					width: 20%;	
+					margin: -20px;
+					float: left;
+					
+				}
+
+				@media screen and (min-width: $desktop-break) {
+					margin: -55px;
+				}
+
 		}
 	
 		.nav ul {
@@ -137,19 +140,31 @@ $bandfont: 'viimeinen_syksyregular';
 			justify-content: flex-end;
 			font-family: $bandfont;
 			color: black;
-			
-				@media screen and (max-width: $mobile-break) {
+			background: $accentRed;
 
+			
+				@media screen and (min-width: $mobile-break) {
+					background: $accentRed;
+					padding: 10px;
 					justify-content: space-around;
 			}
+
+				@media screen and (min-width: $tablet-break){
+					background: $accentRed;
+					justify-content: flex-end;
+				}
 
 			li {
 				margin: 40px 40px 0px 10px;
 				font-size: 3em;
 				
-					@media screen and (max-width: $mobile-break) {
+					@media screen and (min-width: $mobile-break) {
 						margin: 0px 0px 0px 5px;
 						
+					}
+
+					@media screen and (min-width: $tablet-break){
+						margin: 40px 40px 20px 10px;
 					}
 			}
 		}
