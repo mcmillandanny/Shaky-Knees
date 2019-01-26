@@ -31,6 +31,7 @@ $bandfont: 'viimeinen_syksyregular';
 
 $accentRed: #de4344;
 $darkRed: #b13637;
+$accentBlue: #65a6af;
 
 // /* 1. Main Layout ================================= */
 
@@ -122,7 +123,7 @@ $darkRed: #b13637;
 				}
 			
 				@media screen and (min-width: $tablet-break){
-					width: 20%;	
+					width: 14%;	
 					margin: -20px;
 					float: left;
 					
@@ -170,20 +171,56 @@ $darkRed: #b13637;
 		}
 		
 	}
-	.skull1  {
-		position: absolute;
-		top: 60%;
-		left: -1300px;
-		width: 30%;
-		transform: rotate(-35deg);
+
+	.skulls {
+
+		@media screen and (min-width: $mobile-break) {
+			display: none
+		}
+		@media screen and (min-width: $tablet-break){
+			display: block;
+		}
+
+		@media screen and (min-width: $desktop-break){
+			
+		}
+
+		.skull1  {
+			position: absolute;
+			top: 60%;
+			left: -1300px;
+			width: 30%;
+			transform: rotate(-35deg);
+		}
+		.skull2 { 
+			position: absolute;
+			transform: rotate(-60deg);
+			left: -1300px;
+			top: 60%;
+			width: 30%;
+			display: none;
+
+		}
 	}
-	.skull2 { 
-		position: absolute;
-		transform: rotate(-60deg);
-		left: -1300px;
-		top: 60%;
-		width: 30%;
-		display: none;
+	
+	.band-names {
+		font-family: $bandfont;
+		font-size: 3em;
+		background: black;
+		text-align: center;
+
+		.tame, .cage {
+			color: $accentRed;
+		}
+
+		.beck, .incubus {
+			color: $accentBlue;
+		}
+
+		p {
+			color: white;
+		}
 
 	}
-}
+}//content home end
+	
