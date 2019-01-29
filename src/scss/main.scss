@@ -79,14 +79,6 @@ $accentBlue: #65a6af;
 		width: 100%;
 		height: 100vh;
 
-		.red-checker {
-			position: absolute;
-			width: 35%;
-			left: -19%;
-			top: -34%;
-			transform: rotate(45deg);
-		}
-
 		.speaker-loader, .logo-loader {
 			padding: 10px;
 			width: 33%;
@@ -104,7 +96,9 @@ $accentBlue: #65a6af;
 .content {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	background: black;
+	display: none;
 	
 	header {
 
@@ -130,7 +124,7 @@ $accentBlue: #65a6af;
 				}
 
 				@media screen and (min-width: $desktop-break) {
-					margin: -55px;
+					margin: -25px;
 				}
 
 		}
@@ -173,6 +167,7 @@ $accentBlue: #65a6af;
 	}
 
 	.skulls {
+		position: relative;
 
 		@media screen and (min-width: $mobile-break) {
 			display: none
@@ -185,9 +180,10 @@ $accentBlue: #65a6af;
 			
 		}
 
+
 		.skull1  {
 			position: absolute;
-			top: 60%;
+			top: 80%;
 			left: -1300px;
 			width: 30%;
 			transform: rotate(-35deg);
@@ -196,17 +192,16 @@ $accentBlue: #65a6af;
 			position: absolute;
 			transform: rotate(-60deg);
 			left: -1300px;
-			top: 60%;
+			top: 80%;
 			width: 30%;
-			display: none;
 
 		}
 	}
 	
 	.band-names {
+		position: relative;
 		font-family: $bandfont;
 		font-size: 3em;
-		background: black;
 		text-align: center;
 
 		.tame, .cage {

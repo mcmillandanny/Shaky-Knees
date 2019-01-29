@@ -1,6 +1,20 @@
 console.log("Shaky Knees");
 
 
+var splitTextedStuff = new SplitText(".band-names p", {type: 'words'});
+
+// TweenMax.staggerFrom(splitTextedStuff.words, 1, {scale: 0, left: -320, top: -110 }, 0.5)
+
+
+splitTextedStuff.words.forEach(function(word, i) {
+    
+    TweenMax.from(word, 1, {
+        delay: 2 + (i * 0.1), 
+        scale: 0, 
+        left: -word.offsetLeft + 110, 
+        top: -word.offsetTop +  120
+    })
+})
 //Speaker Loader Animations
 // var loaderSpeaker = new TimelineMax({delay: 1.5});
 
@@ -13,16 +27,16 @@ console.log("Shaky Knees");
 // //Logo Loader Animations
 var loaderLogo = new TimelineMax({delay: 0.4});
 
-// loaderLogo.from(".logo-loader",1, {
-//     opacity: 0, 
-//     ease:Back.easeIn
-// })
-// loaderLogo.to(".logo-loader",1, {
-//     opacity: 1
-// })
-loaderLogo.to(".loader", 1, {
-    display: "none"
-});
+loaderLogo.from(".logo-loader",1, {
+    opacity: 0, 
+    ease:Back.easeIn
+})
+loaderLogo.to(".logo-loader",1, {
+    opacity: 1
+})
+// loaderLogo.to(".loader", 1, {
+//     display: "none"
+// });
 
 
 /// Skull Load in animation
@@ -38,11 +52,6 @@ skull.to(".skull2", 2 , {
 
 })
 
-skull.to(".skull1", .5, {
-    display: "none"
-})
-
 skull.to(".skull2", 3, {
-    display: "block",
     rotaion: 20
 })
