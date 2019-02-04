@@ -45,7 +45,8 @@ $accentBlue: #65a6af;
 .loader {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	display: none;
 
 		.top-text-wrapper {
 			position: absolute;
@@ -97,73 +98,90 @@ $accentBlue: #65a6af;
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
-	background: black;
-	display: none;
+	background: #fff;
+	// display: none;
 	
-	header {
-
-		.logo-home {
-			width: 20%;
-			float: left;
 
 
-				@media screen and (min-width: $mobile-break) {
-					display: block;
-					margin-left: auto;
-					margin-right: auto;
-					width: 50%;
-					float: none;
+	// header {
 
-				}
+	// 	.logo-home {
+	// 		width: 20%;
+	// 		float: left;
+
+
+	// 			@media screen and (min-width: $mobile-break) {
+	// 				display: block;
+	// 				margin-left: auto;
+	// 				margin-right: auto;
+	// 				width: 50%;
+	// 				float: none;
+
+	// 			}
 			
-				@media screen and (min-width: $tablet-break){
-					width: 14%;	
-					margin: -20px;
-					float: left;
+	// 			@media screen and (min-width: $tablet-break){
+	// 				width: 14%;	
+	// 				margin: -20px;
+	// 				float: left;
 					
-				}
+	// 			}
 
-				@media screen and (min-width: $desktop-break) {
-					margin: -25px;
-				}
+	// 			@media screen and (min-width: $desktop-break) {
+	// 				margin: -25px;
+	// 			}
 
-		}
+	// 	}
 	
-		.nav ul {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-end;
-			font-family: $bandfont;
-			color: black;
-			background: $accentRed;
+	// 	.nav ul {
+	// 		font-family: $bandfont;
+	// 		color: #fff;
+			
 
 			
-				@media screen and (min-width: $mobile-break) {
-					background: $accentRed;
-					padding: 10px;
-					justify-content: space-around;
-			}
+	// 			@media screen and (min-width: $mobile-break) {
 
-				@media screen and (min-width: $tablet-break){
-					background: $accentRed;
-					justify-content: flex-end;
-				}
+	// 				padding: 10px;
+	// 				justify-content: space-around;
+	// 		}
 
-			li {
-				margin: 40px 40px 0px 10px;
-				font-size: 3em;
+	// 			@media screen and (min-width: $tablet-break){
+
+	// 				justify-content: flex-end;
+	// 			}
+
+	// 		li {
+
+	// 			font-size: 3em;
 				
-					@media screen and (min-width: $mobile-break) {
-						margin: 0px 0px 0px 5px;
-						
-					}
+	// 				@media screen and (min-width: $mobile-break) {
 
-					@media screen and (min-width: $tablet-break){
-						margin: 40px 40px 20px 10px;
-					}
-			}
-		}
+						
+	// 				}
+
+	// 				@media screen and (min-width: $tablet-break){
+
+	// 				}
+	// 		}
+	// 	}
 		
+	// }
+
+	.col-1 {
+		border: 1px red solid;
+	}
+
+	.col-2 {
+		border: 1px green solid;
+	}
+
+	.skull, .black-bolt {
+		width: 20%;
+	}
+
+	.nav {
+		color: #fff;
+		font-family: $bandfont;
+		letter-spacing: 1px;
 	}
 
 	.skulls {
@@ -219,3 +237,44 @@ $accentBlue: #65a6af;
 	}
 }//content home end
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SVG TEST STUFF
+
+
+.page1svg  {
+	#INCUBUS {
+		
+		transition: .5s;
+
+	}
+
+	#INCUBUS:hover {
+		path {
+			fill: red !important;
+		}
+	}
+	#BECK {
+		transition: .5s;
+	}
+
+	#BECK:hover {
+		path {
+		fill: red !important;
+		}
+	}
+
+}

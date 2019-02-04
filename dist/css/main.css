@@ -83,7 +83,8 @@ table {
 .loader {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	display: none;
 }
 
 .loader .top-text-wrapper {
@@ -135,78 +136,25 @@ table {
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
-	background: black;
-	display: none;
+	background: #fff;
 }
 
-.content header .logo-home {
+.content .col-1 {
+	border: 1px red solid;
+}
+
+.content .col-2 {
+	border: 1px green solid;
+}
+
+.content .skull, .content .black-bolt {
 	width: 20%;
-	float: left;
 }
 
-@media screen and (min-width: 320px) {
-	.content header .logo-home {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 50%;
-		float: none;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.content header .logo-home {
-		width: 14%;
-		margin: -20px;
-		float: left;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.content header .logo-home {
-		margin: -25px;
-	}
-}
-
-.content header .nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+.content .nav {
+	color: #fff;
 	font-family: "viimeinen_syksyregular";
-	color: black;
-	background: #de4344;
-}
-
-@media screen and (min-width: 320px) {
-	.content header .nav ul {
-		background: #de4344;
-		padding: 10px;
-		justify-content: space-around;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.content header .nav ul {
-		background: #de4344;
-		justify-content: flex-end;
-	}
-}
-
-.content header .nav ul li {
-	margin: 40px 40px 0px 10px;
-	font-size: 3em;
-}
-
-@media screen and (min-width: 320px) {
-	.content header .nav ul li {
-		margin: 0px 0px 0px 5px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.content header .nav ul li {
-		margin: 40px 40px 20px 10px;
-	}
+	letter-spacing: 1px;
 }
 
 .content .skulls {
@@ -258,6 +206,22 @@ table {
 
 .content .band-names p {
 	color: white;
+}
+
+.page1svg #INCUBUS {
+	transition: .5s;
+}
+
+.page1svg #INCUBUS:hover path {
+	fill: red !important;
+}
+
+.page1svg #BECK {
+	transition: .5s;
+}
+
+.page1svg #BECK:hover path {
+	fill: red !important;
 }
 
 /*# sourceMappingURL=main.css.map */
